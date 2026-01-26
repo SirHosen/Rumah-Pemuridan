@@ -26,7 +26,7 @@ export default function Hero() {
         }}
       >
         <Image
-          src="/hero-bg.svg"
+          src="/images/background.png"
           alt="Background"
           fill
           className="object-cover"
