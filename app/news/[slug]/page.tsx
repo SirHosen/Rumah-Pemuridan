@@ -4,19 +4,7 @@ import Link from 'next/link'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 
-export async function generateStaticParams() {
-  const supabase = await createClient()
-  const { data: news } = await supabase
-    .from('news')
-    .select('slug')
-    .eq('published', true)
-
-  if (!news) return []
-
-  return news.map((item) => ({
-    slug: item.slug,
-  }))
-}
+export const dynamic = 'force-dynamic'
 
 export default async function NewsDetailPage({
   params,
