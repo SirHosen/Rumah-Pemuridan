@@ -22,9 +22,22 @@ export default async function HomePage() {
           <h1 className="text-5xl md:text-6xl font-serif text-stone-900 mb-6 leading-tight">
             Rumah Pemuridan
           </h1>
-          <p className="text-xl text-stone-600 leading-relaxed max-w-2xl">
-            Sebuah tempat untuk bertumbuh dalam iman, belajar firman Tuhan, dan membangun komunitas yang saling mengasihi.
+          <p className="text-xl text-stone-600 leading-relaxed mb-8">
+            Platform pelayanan dan edukasi rohani dari <strong>Tripartite Impact Foundation</strong>
           </p>
+          <p className="text-lg text-stone-700 leading-relaxed max-w-3xl">
+            Kami hadir untuk menolong umat Tuhan memahami bahwa keselamatan dalam Yesus Kristus 
+            bukan hanya menyentuh dimensi spiritual secara sempit, melainkan merupakan karya Allah 
+            yang memulihkan totalitas manusia dalam seluruh aspek kehidupannya—<strong>roh, jiwa, dan tubuh</strong>—di dalam Kristus.
+          </p>
+          <div className="mt-8">
+            <Link 
+              href="/tentang"
+              className="inline-block px-6 py-3 bg-stone-900 text-white rounded-sm hover:bg-stone-700 transition-colors font-medium"
+            >
+              Pelajari Lebih Lanjut
+            </Link>
+          </div>
         </section>
 
         {/* Latest News Section */}
