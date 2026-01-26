@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rumah Pemuridan - Church Website
 
-## Getting Started
+A production-ready church website built with Next.js, Supabase, and Tailwind CSS. Features a clean editorial design with robust security.
 
-First, run the development server:
+## Features
+
+- **Public Pages**: Homepage, news list, and article detail (no authentication required)
+- **Admin Dashboard**: Complete news management system (authentication required)
+- **Security**: Row Level Security (RLS) at database level + middleware protection
+- **Design**: Editorial, minimalist, responsive design with "quiet luxury" aesthetic
+- **Single Admin**: One pastor account with full content control
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Database & Auth**: Supabase (PostgreSQL + Auth)
+- **Styling**: Tailwind CSS v4
+- **Deployment**: Vercel-ready
+- **Language**: TypeScript
+
+## Quick Start
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure Supabase
+
+1. Create a Supabase project at [supabase.com](https://supabase.com)
+2. Copy your project URL and anon key
+3. Update `.env.local`:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your-actual-project-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-actual-anon-key
+```
+
+### 3. Run Database Migration
+
+1. Go to Supabase dashboard → SQL Editor
+2. Copy contents of `supabase/schema.sql`
+3. Paste and execute
+
+### 4. Create Admin User
+
+1. Supabase dashboard → Authentication → Users
+2. Click "Add user" → Enter pastor's email and password
+3. User can now login at `/login`
+
+### 5. Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Security Model
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Authentication
+- Admin routes (`/admin/*`) protected by middleware
+- Session managed via Supabase Auth cookies
 
-## Learn More
+### Row Level Security
+- **Public**: Can only read published news
+- **Authenticated**: Full CRUD access
+- Enforced at database level
 
-To learn more about Next.js, take a look at the following resources:
+## Design Philosophy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Editorial**: Clean typography, generous spacing
+- **Calm**: No flashy animations or effects
+- **Responsive**: Mobile-first, touch-friendly
+- **Simple**: Designed for non-technical admin users
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment to Vercel
 
-## Deploy on Vercel
+1. Push to GitHub
+2. Import in Vercel
+3. Add environment variables
+4. Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Auto-deploys on every push to main.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Documentation
+
+- Full setup: `supabase/README.md`
+- [Next.js Docs](https://nextjs.org/docs)
+- [Supabase Docs](https://supabase.com/docs)
+- [Tailwind Docs](https://tailwindcss.com/docs)
