@@ -25,13 +25,14 @@ export default function Header() {
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 transition-transform hover:scale-105">
-          <Image
-            src="/logo/logo.png"
-            alt="Rumah Pemuridan"
-            width={40}
-            height={40}
-            className="drop-shadow-md sm:w-[50px] sm:h-[50px]"
-          />
+          <div className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] relative flex-shrink-0">
+            <Image
+              src="/logo/logo.png"
+              alt="Rumah Pemuridan"
+              fill
+              className="drop-shadow-md object-contain"
+            />
+          </div>
           <span className={`font-cinzel text-base sm:text-xl font-bold ${scrolled ? 'text-darkBrown-900' : 'text-cream-50 text-shadow'}`}>
             Rumah Pemuridan
           </span>

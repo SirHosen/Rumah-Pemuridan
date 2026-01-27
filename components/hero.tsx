@@ -29,9 +29,10 @@ export default function Hero() {
           src="/images/background.png"
           alt="Background"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
           quality={90}
+          sizes="100vw"
         />
       </div>
 
@@ -49,13 +50,14 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: 'easeOut' }}
           className="mb-8"
         >
-          <Image
-            src="/logo/logo.png"
-            alt="Rumah Pemuridan"
-            width={240}
-            height={240}
-            className="drop-shadow-2xl w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[240px] md:h-[240px]"
-          />
+          <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[240px] md:h-[240px] relative">
+            <Image
+              src="/logo/logo.png"
+              alt="Rumah Pemuridan"
+              fill
+              className="drop-shadow-2xl object-contain"
+            />
+          </div>
         </motion.div>
 
         <motion.h1
