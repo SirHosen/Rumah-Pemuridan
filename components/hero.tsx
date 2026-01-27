@@ -52,9 +52,9 @@ export default function Hero() {
           <Image
             src="/logo/logo.png"
             alt="Rumah Pemuridan"
-            width={180}
-            height={180}
-            className="drop-shadow-2xl"
+            width={240}
+            height={240}
+            className="drop-shadow-2xl w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[240px] md:h-[240px]"
           />
         </motion.div>
 

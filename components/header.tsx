@@ -24,24 +24,24 @@ export default function Header() {
       }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 transition-transform hover:scale-105">
           <Image
             src="/logo/logo.png"
             alt="Rumah Pemuridan"
-            width={50}
-            height={50}
-            className="drop-shadow-md"
+            width={40}
+            height={40}
+            className="drop-shadow-md sm:w-[50px] sm:h-[50px]"
           />
-          <span className={`font-cinzel text-xl font-bold ${scrolled ? 'text-darkBrown-900' : 'text-cream-50 text-shadow'}`}>
+          <span className={`font-cinzel text-base sm:text-xl font-bold ${scrolled ? 'text-darkBrown-900' : 'text-cream-50 text-shadow'}`}>
             Rumah Pemuridan
           </span>
         </Link>
 
-        <ul className="flex gap-8">
+        <ul className="flex gap-3 sm:gap-6 md:gap-8">
           <li>
             <Link
               href="/"
-              className={`font-montserrat font-medium transition-all hover:scale-110 ${
+              className={`font-montserrat text-sm sm:text-base font-medium transition-all hover:scale-110 ${
                 scrolled
                   ? 'text-darkBrown-900 hover:text-gold-600'
                   : 'text-cream-50 text-shadow hover:text-gold-300'
@@ -53,7 +53,7 @@ export default function Header() {
           <li>
             <Link
               href="/tentang"
-              className={`font-montserrat font-medium transition-all hover:scale-110 ${
+              className={`font-montserrat text-sm sm:text-base font-medium transition-all hover:scale-110 ${
                 scrolled
                   ? 'text-darkBrown-900 hover:text-gold-600'
                   : 'text-cream-50 text-shadow hover:text-gold-300'
@@ -65,7 +65,7 @@ export default function Header() {
           <li>
             <Link
               href="/news"
-              className={`font-montserrat font-medium transition-all hover:scale-110 ${
+              className={`font-montserrat text-sm sm:text-base font-medium transition-all hover:scale-110 ${
                 scrolled
                   ? 'text-darkBrown-900 hover:text-gold-600'
                   : 'text-cream-50 text-shadow hover:text-gold-300'
