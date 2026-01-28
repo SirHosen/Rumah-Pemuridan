@@ -29,7 +29,7 @@ export default async function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="font-montserrat text-lg text-darkBrown-800 leading-relaxed">
-                <strong className="text-gold-600">Yayasan Rumah Pemuridan</strong> adalah sebuah yayasan Kristen yang berfokus 
+                <strong className="text-gold-600">Digital Ministry Center</strong> adalah sebuah yayasan Kristen yang berfokus 
                 pada pelayanan pemuridan, pembinaan rohani, dan pengembangan karakter Kristiani. Kami percaya bahwa setiap 
                 orang dapat bertumbuh dalam iman dan menjadi murid Kristus yang dewasa.
               </p>

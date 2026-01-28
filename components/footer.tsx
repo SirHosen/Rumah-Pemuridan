@@ -35,7 +35,7 @@ export default function Footer() {
         
         <div className="border-t border-cream-700/30 pt-8 text-center">
           <p className="font-montserrat text-sm text-cream-300">
-            &copy; {new Date().getFullYear()} <span className="text-gold-400 font-semibold">Yayasan Rumah Pemuridan</span>. All rights reserved.
+            &copy; {new Date().getFullYear()} <span className="text-gold-400 font-semibold">Digital Ministry Center</span>. All rights reserved.
           </p>
         </div>
       </div>
